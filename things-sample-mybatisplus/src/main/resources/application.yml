@@ -1,0 +1,27 @@
+server:
+    port: 8080
+
+spring:
+    application:
+        name: things-sample-mybatisplus
+    datasource:
+        driver-class-name: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://127.0.0.1:3306/things-sample?autoReconnect=true&useUnicode=true&characterEncoding=utf8&useSSL=false&serverTimezone=UTC&nullCatalogMeansCurrent=true&allowPublicKeyRetrieval=true
+        username: things
+        password: things
+
+mybatis-plus:
+    mapper-locations: classpath*:com/storythings/**/mapping/*.xml
+    configuration:
+        ## 驼峰
+        map-underscore-to-camel-case: true
+        cache-enabled: true
+        lazy-loading-enabled: true
+        multiple-result-sets-enabled: true
+    global-config:
+        banner: false
+        ## 开启sqlRunner
+        enable-sql-runner: true
+        db-config:
+            id-type: assign_id
+            table-underline: true

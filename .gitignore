@@ -1,0 +1,3 @@
+# Project exclude paths
+/things-sample-common/target/
+/things-sample-mybatisplus/target/
